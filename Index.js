@@ -117,10 +117,11 @@ const ResetInput = () => {
 
 //Funcion ResetDatosPizzas(). Blanquea los datos de la ultima lista elegida.
 const ResetDatosPizzas = () => {
-    return imagenCard.innerHTML = `<img src="./assets/img/Pizzas.jpg" alt="Pizzas" id="imagen" />`,
+    imagenCard.innerHTML = `<img src="./assets/img/Pizzas.jpg" alt="Pizzas" id="imagen" />`,
     nombrePizza.innerHTML = `Nombre:`,
     ingredientesPizza.innerHTML = `Ingredientes:`,
     precioPizza.innerHTML = `Precio $.:`;
+    return;
 };
 
 //Funcion RenderDatosPizzas(). Pinta en la pantalla los datos de las pizza elegida
@@ -141,12 +142,12 @@ const RenderDatosPizzas = () => {
       return; 
     } else {
         const ingreditesPizzaBuscada = PizzaBuscada.ingredientes.join(', ');
-        console.dir(imagenCard.innerHTML);
-        console.dir(PizzaBuscada);
-        return imagenCard.innerHTML = `<img src=${PizzaBuscada.imagen.src} alt="Pizzas" id="imagen"/>`,
+        mensajeError.textContent = "";
+        imagenCard.innerHTML = `<img src=${PizzaBuscada.imagen.src} alt="Pizzas" id="imagen"/>`,
         nombrePizza.innerHTML = `Nombre: <span>${PizzaBuscada.nombre}<span>`,
         ingredientesPizza.innerHTML = `Ingredientes: <span>${ingreditesPizzaBuscada}<span>`,
         precioPizza.innerHTML = `Precio $.: <span>${PizzaBuscada.precio}</span>`;
+        return;
     }    
   }
 };
