@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/styles.css" />
+	<title>Pizzas NUCBA</title>
+</head>
+
+<body>
+    <section class="contenedor-principal">
+        <div class="contenedor-menu">
+            <h1 class="titulo">Pizzas NUCBA</h1>
+            <div class="contenedor-lista-sabores">
+                <ul class="lista-sabores" id="lista-sabores"></ul>
+            </div>
+            <p>Debe ingresar el n° de la pizza que desea consultar y presionar el botón</p>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="./assets/img/Pizzas.jpg" alt="Pizzas" id="imagen" />
+            </div>
+    
+            <div class="contenedor-datos-pizzas">
+                <h2 id="encabezado-datos">Datos de la pizza de su elección</h2>
+                <div class="datos-pizzas">
+                    <h3 id="nombre-pizza">Nombre:</h3>
+                    <h3 id="ingredientes-pizza">Ingredientes:</h3>
+                    <h3 id="precio-pizza">Precio $.:</h3>    
+                </div> 
+            </div>
+
+            <form id="form">
+                <input type="number" id="input" />
+                <button type="submit" id="boton">ENVIAR</button>
+            </form>
+
+            <p id="mensaje-error"> </p>
+        </div>
+    </section>
+	<script src="Index.js"></script>
+</body>
+
+</html>
